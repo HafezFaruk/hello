@@ -1,3 +1,14 @@
+function updateTotal() {
+    
+}
+
+
+
+
+
+
+
+
 /*start mamory-cost */
 // mamory-button-1
 const mamoryButton1 = document.getElementById('mamory-button-1').addEventListener('click', function(){
@@ -8,7 +19,7 @@ const mamoryButton1 = document.getElementById('mamory-button-1').addEventListene
 // mamory-button-1
 const mamoryButton2 = document.getElementById('mamory-button-2').addEventListener('click', function(){
     const mamoryCost = document.getElementById('mamory-cost');
-    mamoryCost.innerText = '100';
+    mamoryCost.innerText = '180';
     updateTotal()
 });
 /*end mamory-cost 
@@ -26,13 +37,12 @@ const storageButton1 = document.getElementById('storage-button-1').addEventListe
 const storageButton2 = document.getElementById('storage-button-2').addEventListener('click', function(){
     const storageCost = document.getElementById('storage-cost');
     storageCost.innerText = '100';
-
     updateTotal()
 });
 // storage-button-3
 const storageButton3 = document.getElementById('storage-button-3').addEventListener('click', function(){
     const storageCost = document.getElementById('storage-cost');
-    storageCost.innerText = '150';
+    storageCost.innerText = '180';
     updateTotal()
 });
 /*end storage-cost 
@@ -49,25 +59,19 @@ const deliveryButton1 = document.getElementById('delivery-charge-button-1').addE
 // delivery-button-2
 const deliveryButton2 = document.getElementById('delivery-charge-button-2').addEventListener('click', function(){
     const deliveryCost = document.getElementById('delivery-charge');
-    deliveryCost.innerText = '10';
+    deliveryCost.innerText = '20';
     updateTotal()
 });
 /*end delivery-cost */
-
-function updateTotal() {
-   
-}
-
-
-
-/* function calculateTotal() {
-    const phoneTotal = getInputValue('phone') * 1219;
-    const caseTotal = getInputValue('case') * 59;
-    const subTotal = phoneTotal + caseTotal;
-    const tax = subTotal / 10;
-    const totalPrice = subTotal + tax;
-    // update on the html
-    document.getElementById('sub-total').innerText = subTotal;
-    document.getElementById('tax-amount').innerText = tax;
-    document.getElementById('total-price').innerText = totalPrice;
-} */
+//---------------------------------
+/* add pomo code */
+document.getElementById('code-apply').addEventListener('click', function () {
+    // get user code
+    const codeField = document.getElementById('code-input');
+    const userCode = codeField.value;
+    // check code
+    if (userCode == 'stevekaku') {
+        //console.log('ha paysi');
+    }
+    codeField.value = '';
+});
