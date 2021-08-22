@@ -23,10 +23,10 @@ function gettingTotal() {
 function discountedTotal() {
     const matchCode = document.getElementById('pomo-input');
     if (matchCode.value == 'stevekaku') {
-        const TotalPriceText = document.getElementById('total-price');
-        const TotalPrice = parseFloat(TotalPriceText.innerText)
-        const discount = TotalPrice / 5;
-        const discountedTotal = TotalPrice - discount;
+        const totalPriceText = document.getElementById('total-price');
+        const totalPrice = parseFloat(totalPriceText.innerText)
+        const discount = totalPrice / 5;
+        const discountedTotal = totalPrice - discount;
         document.getElementById('final-total').innerText = discountedTotal;
         matchCode.value = '';
     }
